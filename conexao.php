@@ -10,3 +10,6 @@ if ($mysql->connect_errno)
 {
     echo "Falha ao realizar conexão com ('. $mysql->connect_errno . ')" . $mysql->connect_error;
 }
+
+//Variáveis globais
+$URL = "seminario-uniasselvi/";

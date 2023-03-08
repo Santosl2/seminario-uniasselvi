@@ -1,5 +1,7 @@
-<?php
+<?php include('views/header.php') ?>
 
-include('conexao.php');
+<div>
+    aqui incluimos o bloco de codigo da index
+</div>
 
-echo 'Hello World';
+<?php include('views/footer.php'); ?>
