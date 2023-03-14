@@ -15,7 +15,7 @@ Aplicação em PHP que simula um vlog ou diário de postagens. (continuar descri
 	* Servidor local (apache, nginx, etc)
 	* MySql
 
-### :hammer: Funcionalidades do projeto
+### :hammer: Funcionalidades
 	* Login
 	* Publicação de postagens
 
@@ -27,6 +27,10 @@ Aplicação em PHP que simula um vlog ou diário de postagens. (continuar descri
   ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)<br>
   ![Bootstrap](https://img.shields.io/badge/-Bootstrap-333333?style=flat&logo=bootstrap)<br>
 
+### Paleta de cores: 
+![image](https://user-images.githubusercontent.com/82416158/224104215-913e4f35-0968-4e08-8abe-501069895063.png) <br>
+(a paleta adicionada é meramente ilustrativa)
+
 Autores: 
-	| [<img src="https://avatars.githubusercontent.com/u/30351153?v=4" width=115><br><sub>Eduardo</sub>](https://github.com/camilafernanda) |  [<img src="https://avatars.githubusercontent.com/u/67132916?v=4" width=115><br><sub>Matheus</sub>](https://github.com/Santosl2) |  [<img src="https://avatars.githubusercontent.com/u/82416158?v=4" width=115><br><sub>Lorrayne</sub>](https://github.com/lorrayneantonielle) |  [<img src="https://avatars.githubusercontent.com/u/30351153?v=4" width=115><br><sub>Vinicius</sub>](https://github.com/guilhermeonrails) |
+	| [<img src="https://avatars.githubusercontent.com/u/87577089?v=4" width=115><br><sub>Eduardo</sub>](https://github.com/Duellis) |  [<img src="https://avatars.githubusercontent.com/u/67132916?v=4" width=115><br><sub>Matheus</sub>](https://github.com/Santosl2) |  [<img src="https://avatars.githubusercontent.com/u/82416158?v=4" width=115><br><sub>Lorrayne</sub>](https://github.com/lorrayneantonielle) |  [<img src="https://avatars.githubusercontent.com/u/105394909?v=4" width=115><br><sub>Vinicius</sub>](https://github.com/vinic-alves) |
 | :---: | :---: | :---: | :---: |
