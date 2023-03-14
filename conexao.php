@@ -12,4 +12,6 @@ if ($mysql->connect_errno)
 }
 
 //Variáveis globais
-$URL = "seminario-uniasselvi/";
+$BASE_URL = "localhost/seminario-uniasselvi/";
+
+?>
