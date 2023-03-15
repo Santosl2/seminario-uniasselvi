@@ -12,13 +12,17 @@ if (isset($_POST['login'])) {
     $result = mysqli_query($conexao, $query);
     
     $row = mysqli_num_rows($result);
-    
+
+    if(!isset($usuario)){
+        $_SESSION['usuarioInvalido'] = true;  
+        header('Location: index.php');
+    }
     if($row == 1) {
         $_SESSION['usuario'] = $usuario;
         header("Location: ./views/home.php");
         exit();
     } else {
-        $_SESSION['nao_autenticado'] = true;
+        $_SESSION['usuarioInvalido'] = true;
         header('Location: index.php');
         exit();
     }
@@ -36,21 +40,27 @@ if (isset($_POST['login'])) {
                     <div class="form-group mb-4">
                         <label for="email">E-mail</label>
                         <input name="email" class=" form-control" id="email" placeholder="Email" type="email">
- 
                     </div>
  
                     <div class="form-group mb-4">
                         <label for="password">Senha</label>
                         <input class="form-control" name="senha" id="password" placeholder="******" type="password">
- 
                     </div>
  
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block" name="login"> Login </button>
                     </div>
+                    <?php if(isset($_SESSION['usuarioInvalido'])) {?>
+                            <div class="alert alert-danger mt-2" role="alert">
+                                Preencha todos os campos corretamente.
+                            </div>
+                    <?php } ?>
                 </form>
             </article>
         </div>
 </main>
 
+<?php
+    unset($_SESSION['verificaEmail']); 
+?>
 <?php include('views/footer.php'); ?>
