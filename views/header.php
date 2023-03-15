@@ -12,5 +12,5 @@
 <body>
 
 <?php 
-    include("./conexao.php");
+    include($_SERVER['DOCUMENT_ROOT'] . '/seminario-uniasselvi/conexao.php');
 ?>
