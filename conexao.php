@@ -6,11 +6,7 @@ $database = "nomedobancolocal";
 $user = "root";
 $password = "";
 
-$mysql = new mysqli($hostname, $user, $password, $database);
-if ($mysql->connect_errno) 
-{
-    echo "Falha ao realizar conexão com ('. $mysql->connect_errno . ')" . $mysql->connect_error;
-}
+$conexao = mysqli_connect($hostname, $user, $password, $database) or die ('Não foi possível conectar');
 
 //Variáveis globais
 $BASE_URL = "localhost/seminario-uniasselvi/";
