@@ -1,6 +1,8 @@
 <?php include('views/header.php');
 
-if ($_SESSION['id_usuario']) {
+// verifica se o usuário está logado
+// se sim, manda p home
+if (isset($_SESSION['id_usuario'])) {
     header("Location: ./views/home.php");
     exit();
 }
