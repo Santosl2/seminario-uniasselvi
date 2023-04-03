@@ -18,13 +18,13 @@ if (isset($_POST['publicar'])) {
     if (!$corpo) {
         $_SESSION['messagemErro'] = 'Por favor, insira o corpo da mensagem.';
         header('Location: home.php');
-        exit;
+        exit();
     }
 
     if (strlen($corpo) <= 6) {
         $_SESSION['messagemErro'] = 'Por favor, uma mensagem com mais de 6 caracteres.';
         header('Location: home.php');
-        exit;
+        exit();
     }
 
     // faz a inserção no banco
@@ -38,7 +38,7 @@ if (isset($_POST['publicar'])) {
     // verifico se o ID é valido, e se sim redireciona para a mesma página
     if ($id) {
         header('Location: home.php');
-        exit;
+        exit();
     }
 }
 
@@ -55,7 +55,7 @@ if (isset($_POST['deletar'])) {
     if (!$postExists) {
         $_SESSION['messagemErro'] = 'Postagem inexistente.';
         header('Location: home.php');
-        exit;
+        exit();
     }
 
     // faz a deleção no banco
@@ -64,15 +64,15 @@ if (isset($_POST['deletar'])) {
     $result = mysqli_query($conexao, $query) or die('Erro ao deletar registro.');
 
     header('Location: home.php');
-    exit;
+    exit();
 }
 
 ?>
 <div class="layout__main">
     <?php if (isset($_SESSION['messagemErro'])) { ?>
-        <div class="alert alert-danger mt-2" role="alert">
-            <?= $_SESSION['messagemErro']; ?>
-        </div>
+    <div class="alert alert-danger mt-2" role="alert">
+        <?= $_SESSION['messagemErro']; ?>
+    </div>
     <?php } ?>
 
     <form class="tweet" method="POST" action=''>
@@ -89,7 +89,8 @@ if (isset($_POST['deletar'])) {
                 </div>
 
             </div>
-            <textarea name="corpo" id="" cols="30" rows="10" placeholder="O que você está pensando?" minlength="6" required></textarea>
+            <textarea name="corpo" id="" cols="30" rows="10" placeholder="O que você está pensando?" minlength="6"
+                required></textarea>
             <div>
                 <button type="submit" name="publicar">Enviar</button>
             </div>
@@ -100,32 +101,33 @@ if (isset($_POST['deletar'])) {
 
     <?php foreach ($result as $postagem) {
     ?>
-        <form class="tweet" method="POST" action="">
-            <img class="tweet__author-logo" src="/assets/img/bronze girl.jpg" />
-            <div class="tweet__main">
-                <div class="tweet__header">
-                    <div class="tweet__header_content">
-                        <div class="tweet__author-name">
-                            <?= $postagem['nome']; ?>
-                        </div>
-                        <div class="tweet__author-slug">
-
-                        </div>
-                        <div class="tweet__publish-time">
-                            38m
-                        </div>
+    <form class="tweet" method="POST" action="">
+        <img class="tweet__author-logo" src="/assets/img/bronze girl.jpg" />
+        <div class="tweet__main">
+            <div class="tweet__header">
+                <div class="tweet__header_content">
+                    <div class="tweet__author-name">
+                        <?= $postagem['nome']; ?>
                     </div>
-                    <span class="delete-icon">
-                        <input type="hidden" value="<?= $postagem['id']; ?>" name="post_id">
-                        <button type="submit" name="deletar" style="border: none;background: transparent;width: min-content">
-                            <img id="delete-icon" src="/assets/svg/trash.svg"></span>
-                    </button>
+                    <div class="tweet__author-slug">
+
+                    </div>
+                    <div class="tweet__publish-time">
+                        38m
+                    </div>
                 </div>
-                <div class="tweet__content">
-                    <?= $postagem['corpo']; ?>
-                </div>
+                <span class="delete-icon">
+                    <input type="hidden" value="<?= $postagem['id']; ?>" name="post_id">
+                    <button type="submit" name="deletar"
+                        style="border: none;background: transparent;width: min-content">
+                        <img id="delete-icon" src="/assets/svg/trash.svg"></span>
+                </button>
             </div>
-        </form>
+            <div class="tweet__content">
+                <?= $postagem['corpo']; ?>
+            </div>
+        </div>
+    </form>
     <?php } ?>
 
 

@@ -1,5 +1,10 @@
 <?php include('views/header.php');
 
+if ($_SESSION['id_usuario']) {
+    header("Location: ./views/home.php");
+    exit();
+}
+
 if (isset($_POST['login'])) {
 
     $usuario = mysqli_real_escape_string($conexao, $_POST['email']);
