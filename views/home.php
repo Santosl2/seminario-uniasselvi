@@ -7,13 +7,12 @@ $query = "SELECT *
              where p.id_usuario = {$idUsuario}";
 
 $result = mysqli_fetch_all(mysqli_query($conexao, $query), MYSQLI_ASSOC);
-
-
 ?> 
 
-<h1>foi</h1>
+<h1>entrou</h1>
+
+<h3>POSTAGENS</h3>
 <?php foreach($result as $postagem) {?>
-    Corpo da postagem
     <?php echo $postagem['corpo']?> </br>
 <?php }?>
  
