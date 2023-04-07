@@ -76,7 +76,7 @@ if (isset($_POST['deletar'])) {
     <?php } ?>
 
     <form class="tweet" method="POST" action=''>
-        <img class="tweet__author-logo" src="/assets/img/bronze girl.jpg" />
+        <img class="tweet__author-logo" src="/seminario-uniasselvi/assets/img/bronze girl.jpg" />
         <div class="tweet__main">
             <div class="tweet__header">
                 <div class="tweet__header_content">
@@ -102,7 +102,7 @@ if (isset($_POST['deletar'])) {
     <?php foreach ($result as $postagem) {
     ?>
     <form class="tweet" method="POST" action="">
-        <img class="tweet__author-logo" src="/assets/img/bronze girl.jpg" />
+        <img class="tweet__author-logo" src="/seminario-uniasselvi/assets/img/bronze girl.jpg" />
         <div class="tweet__main">
             <div class="tweet__header">
                 <div class="tweet__header_content">
@@ -120,7 +120,7 @@ if (isset($_POST['deletar'])) {
                     <input type="hidden" value="<?= $postagem['id']; ?>" name="post_id">
                     <button type="submit" name="deletar"
                         style="border: none;background: transparent;width: min-content">
-                        <img id="delete-icon" src="/assets/svg/trash.svg"></span>
+                        <img id="delete-icon" src="/seminario-uniasselvi/assets/svg/trash.svg"></span>
                 </button>
             </div>
             <div class="tweet__content">

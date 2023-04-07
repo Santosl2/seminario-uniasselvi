@@ -1,3 +1,44 @@
-h1 {
-    color:red;
+main {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+h3{
+    text-align: center;
+    color:#ffffff !important;
+}
+
+.logo-login {
+    max-width: 300px !important;
+}
+.titulo-login {
+    color:#E8B347;
+    text-align: center;
+}
+.text-login {
+    color:#fff;
+    margin-left: 195px;
+}
+.login {
+    background-color: #3A668C;
+    border-radius: 10px;
+}
+.btn-light {
+    background-color: #E8B347 !important;
+    color: #3A668C !important;
+    border-color:#E8B347 !important
+}
+.btn-light:hover {
+    background-color: #fff !important;
+    border-color:#fff !important;
+}
+.btn-primary {
+    border-color:#fff !important;
+    color: #E8B347 !important;
+    background-color: #3A668C !important;
+}
+.btn-primary:hover {
+    background-color: #E8B347 !important;
+    color: #3A668C !important;
+    border-color:#E8B347 !important
 }
