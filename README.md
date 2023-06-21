@@ -3,7 +3,9 @@ Projeto desenvolvido para seminário de Analise e desenvolvimento de sistemas da
 
 
 <h1 align="center"> Bronze Diary </h1>
-Aplicação em PHP que simula um vlog ou diário de postagens. (continuar descrição)
+O Bronze Diary é um aplicativo projetado para proporcionar um ambiente acolhedor e informativo para entusiastas do bronzeamento. Nosso objetivo é criar uma comunidade virtual dedicada ao compartilhamento de conhecimentos, experiências e conselhos relacionados ao processo de bronzeamento, visando sempre um bronzeado saudável e seguro.
+<br>
+O aplicativo permite aos usuários postar dicas sobre o uso adequado do protetor solar, recomendações para exposição gradual ao sol, métodos de preparação da pele, produtos de bronzeamento, escolha de horários adequados para se expor ao sol, conselhos para evitar a desidratação e cuidados pós-bronzeamento. Além disso, incentivamos a troca de informações sobre desafios enfrentados, erros cometidos e lições aprendidas, para que todos possam se beneficiar da experiência coletiva.
 <br>
 <br>
 <p>
@@ -18,6 +20,7 @@ Aplicação em PHP que simula um vlog ou diário de postagens. (continuar descri
 ### :hammer: Funcionalidades
 	* Login
 	* Publicação de postagens
+ 	* Acesso ao feed de postagens próprias e de outros usuários
 
 ### :star: Linguagens   
   ![PHP](https://img.shields.io/badge/-PHP-333333?style=flat&logo=php) <br>
