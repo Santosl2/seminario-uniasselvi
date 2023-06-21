@@ -5,7 +5,7 @@
 $query = "SELECT p.*, u.nome
              from postagens p
              join usuarios u on p.id_usuario = u.id
-             where p.id_usuario = {$idUsuario} ORDER by p.id DESC";
+             ORDER by p.id DESC";
 
 $result = mysqli_fetch_all(mysqli_query($conexao, $query), MYSQLI_ASSOC);
 
