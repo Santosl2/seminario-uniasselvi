@@ -1,7 +1,3 @@
-
-Projeto desenvolvido para seminário de Analise e desenvolvimento de sistemas da faculdade UNIASSELVI
-
-
 <h1 align="center"> Bronze Diary </h1>
 O Bronze Diary é um aplicativo projetado para proporcionar um ambiente acolhedor e informativo para entusiastas do bronzeamento. Nosso objetivo é criar uma comunidade virtual dedicada ao compartilhamento de conhecimentos, experiências e conselhos relacionados ao processo de bronzeamento, visando sempre um bronzeado saudável e seguro.
 <br>
