@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
     $usuario = mysqli_real_escape_string($conexao, $_POST['email']);
     $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-    $query = "SELECT email, id 
+    $query = "SELECT email, id , nome
                 from usuarios 
                 where email = '{$usuario}' 
                 and senha = '{$senha}'";
@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
     }
     if ($row == 1) {
         $_SESSION['usuario'] = $rows['nome'];
-        $_SESSION['nome'] = $usuario;
+        $_SESSION['email'] = $usuario;
         $_SESSION['id_usuario'] = $idUsuario;
         header("Location: ./views/home.php");
         exit();
@@ -42,34 +42,36 @@ if (isset($_POST['login'])) {
 ?>
 
 <main>
-    <div class="container height d-flex justify-content-center align-items-center" style="height: 100vh">
-        <div class="card" style="max-width: 600px;width: 100%">
-            <article class="card-body">
-                <h4 class="card-title text-center mb-4 mt-1">Logue-se na SocialMedia</h4>
-                <hr>
-                <!-- <p class="text-success text-center">MENSAGEM DE ERRO</p> -->
-                <form method="POST" action="">
-                    <div class="form-group mb-4">
-                        <label for="email">E-mail</label>
-                        <input name="email" class=" form-control" id="email" placeholder="Email" type="email">
+    <div class="container">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 login p-5">
+            <h1 class="titulo-login mb-4">Bronze Diary</h1>
+            <form method="POST" action="">
+                <div class="mb-3">
+                <label for="email" class="form-label text-white">Email</label>
+                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                <label for="password" class="form-label text-white">Senha</label>
+                <input type="password" name="senha" class="form-control" id="password" placeholder="*******">
+                </div>
+                <button type="submit" name ="login" class="btn btn-light">Login</button>
+                <span class="text-login">Ainda não possui conta?</span>
+                <a class="btn btn-primary" href="/seminario-uniasselvi/views/cadastro.php">Cadastre-se</a>
+                <?php if (isset($_SESSION['usuarioInvalido'])) { ?>
+                    <div class="alert alert-danger mt-2" role="alert">
+                        Preencha todos os campos corretamente.
                     </div>
-
-                    <div class="form-group mb-4">
-                        <label for="password">Senha</label>
-                        <input class="form-control" name="senha" id="password" placeholder="******" type="password">
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block" name="login"> Login </button>
-                    </div>
-                    <?php if (isset($_SESSION['usuarioInvalido'])) { ?>
-                        <div class="alert alert-danger mt-2" role="alert">
-                            Preencha todos os campos corretamente.
-                        </div>
-                    <?php } ?>
-                </form>
-            </article>
+                <?php } ?>
+            </form>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="/seminario-uniasselvi/assets/img/logo.png" alt="Placeholder Image" class="img-fluid logo-login">
+            </div>
         </div>
+        </div>
+    </div>
 </main>
 
 <?php
